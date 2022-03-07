@@ -8,4 +8,10 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
     }
+
+    // region - Private Methods
+    private fun AddingErrorsTextField() {
+
+    }
+    // endregion
 }
