@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvNameApp"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tvLoginEmail"
+        android:id="@+id/tilLoginEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="245dp"
@@ -43,13 +43,15 @@
         app:startIconDrawable="@drawable/ic_email">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLoginEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tvLoginPsw"
+        android:id="@+id/tilLoginPsw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="245dp"
@@ -60,10 +62,11 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvLoginEmail"
+        app:layout_constraintTop_toBottomOf="@id/tilLoginEmail"
         app:startIconDrawable="@drawable/ic_lock">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLoginPsw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"/>
@@ -76,9 +79,9 @@
         android:layout_height="wrap_content"
         android:text="Sign in"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@id/tvLoginPsw"
-        app:layout_constraintStart_toStartOf="@id/tvLoginPsw"
-        app:layout_constraintTop_toBottomOf="@id/tvLoginPsw"/>
+        app:layout_constraintEnd_toEndOf="@id/tilLoginPsw"
+        app:layout_constraintStart_toStartOf="@id/tilLoginPsw"
+        app:layout_constraintTop_toBottomOf="@id/tilLoginPsw"/>
 
     <Button
         android:id="@+id/btnSignUpHere"
@@ -86,8 +89,8 @@
         android:layout_height="wrap_content"
         android:text="Sign up here"
         android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="@id/tvLoginPsw"
-        app:layout_constraintStart_toStartOf="@id/tvLoginPsw"
+        app:layout_constraintEnd_toEndOf="@id/tilLoginPsw"
+        app:layout_constraintStart_toStartOf="@id/tilLoginPsw"
         app:layout_constraintTop_toBottomOf="@id/btnSignIn"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
