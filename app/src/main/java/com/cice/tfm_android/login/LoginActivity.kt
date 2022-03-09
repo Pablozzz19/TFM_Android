@@ -1,4 +1,4 @@
-package com.cice.tfm_android
+package com.cice.tfm_android.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -28,20 +28,18 @@ class LoginActivity : AppCompatActivity() {
         val etEmail = binding.etLoginEmail.text.toString()
         val etPsw = binding.etLoginPsw.text.toString()
 
-        if (etEmail != null) {
-            when {
-                etEmail.isEmpty() -> {
-                    // Set error text
-                    binding.tilLoginEmail.error = "isEmpty"
-                }
-                Patterns.EMAIL_ADDRESS.matcher(etEmail).matches() -> {
-                    // Set error text
-                    binding.tilLoginEmail.error = "wrongEmail"
-                }
-                else -> {
-                    // Clear error text
-                    binding.tilLoginEmail.error = null
-                }
+        when {
+            etEmail.isEmpty() -> {
+                // Set error text
+                binding.tilLoginEmail.error = "isEmpty"
+            }
+            !Patterns.EMAIL_ADDRESS.matcher(etEmail).matches() -> {
+                // Set error text
+                binding.tilLoginEmail.error = "wrongEmail"
+            }
+            else -> {
+                // Clear error text
+                binding.tilLoginEmail.error = null
             }
         }
 
