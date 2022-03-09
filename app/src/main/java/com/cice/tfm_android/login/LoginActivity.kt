@@ -48,16 +48,15 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        if (etPsw != null) {
-            if (etPsw.isEmpty()) {
-                // Set error text
-                binding.tilLoginPsw.error = "isEmpty"
-            }
-            else {
-                // Clear error text
-                binding.tilLoginPsw.error = null
-            }
+        if (etPsw.isEmpty()) {
+            // Set error text
+            binding.tilLoginPsw.error = "isEmpty"
         }
+        else {
+            // Clear error text
+            binding.tilLoginPsw.error = null
+        }
+
     }
 
     private fun goToRegisterActivity() {
