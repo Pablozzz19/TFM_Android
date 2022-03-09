@@ -1,5 +1,6 @@
 package com.cice.tfm_android.login
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
@@ -18,6 +19,10 @@ class LoginActivity : AppCompatActivity() {
 
         binding.btnSignIn.setOnClickListener {
             addingErrorsTextField()
+        }
+
+        binding.tvSignUp.setOnClickListener {
+            goToRegisterActivity()
         }
 
     }
@@ -53,6 +58,10 @@ class LoginActivity : AppCompatActivity() {
                 binding.tilLoginPsw.error = null
             }
         }
+    }
+
+    private fun goToRegisterActivity() {
+        startActivity(Intent(this, RegisterActivity::class.java))
     }
     // endregion
 }

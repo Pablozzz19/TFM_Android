@@ -142,6 +142,7 @@
         app:layout_constraintStart_toEndOf="@id/glStart"/>
 
     <TextView
+        android:id="@+id/tvSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
